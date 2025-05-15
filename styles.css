@@ -1,0 +1,161 @@
+/* Noid Theme Colors - Based on the logo */
+:root {
+    --noid-bg: #000000;
+    --noid-logo: #9A9A9A;
+    --noid-text: #9A9A9A;
+    --noid-text-dim: #666666;
+    --noid-accent: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--noid-bg);
+    color: var(--noid-text);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2rem;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+.logo-container h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--noid-text);
+    letter-spacing: -0.05em;
+    text-transform: lowercase;
+}
+
+.brewing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.brewing-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--noid-text);
+    opacity: 0.3;
+}
+
+.dot1 {
+    animation: fade 1.5s infinite ease-in-out;
+}
+
+.dot2 {
+    animation: fade 1.5s infinite ease-in-out 0.5s;
+}
+
+.dot3 {
+    animation: fade 1.5s infinite ease-in-out 1s;
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.brewing-container h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--noid-text-dim);
+    text-transform: lowercase;
+    letter-spacing: 0.1em;
+}
+
+.coming-soon {
+    margin-top: 1rem;
+}
+
+.coming-soon p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--noid-text);
+    letter-spacing: 0.2em;
+    text-transform: lowercase;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        gap: 3rem;
+    }
+    
+
+    
+    .logo-container h1 {
+        font-size: 3rem;
+    }
+    
+    .brewing-container h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        gap: 2rem;
+    }
+    
+
+    
+    .logo-container h1 {
+        font-size: 2.5rem;
+    }
+    
+    .brewing-container h2 {
+        font-size: 1rem;
+    }
+}
